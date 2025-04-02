@@ -1,9 +1,15 @@
-import React from "react";
-import { Link, useNavigate } from "react-router";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { BsPencilFill } from "react-icons/bs";
+import { login, logout, onUserStateChange } from "../api/firebase.js";
+import User from "./User.jsx";
 
 function Navbar() {
-  const navigate = useNavigate();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    onUserStateChange(setUser);
+  }, []);
 
   return (
     <header className="flex justify-between border-b border-gray-300 p-2">
@@ -16,7 +22,9 @@ function Navbar() {
         <Link to="/products/new">
           <BsPencilFill />
         </Link>
-        <button>Login</button>
+        {user && <User user={user} />}
+        {!user && <button onClick={login}>Login</button>}
+        {user && <button onClick={logout}>Logout</button>}
       </nav>
     </header>
   );
