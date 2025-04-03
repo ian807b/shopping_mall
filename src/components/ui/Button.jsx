@@ -1,10 +1,13 @@
 import React from "react";
 
-function Button({ text, onClick }) {
+function Button({ text, onClick, disabled }) {
   return (
     <button
-      className="bg-brand text-white py-2 px-4 rounded-sm hover:brightness-130 duration-100 ease-in"
+      className="bg-brand text-white py-2 px-4 rounded-sm
+      hover:brightness-130 duration-100 ease-in
+      disabled:opacity-50 disabled:cursor-not-allowed"
       onClick={onClick}
+      disabled={disabled}
     >
       {text}
     </button>

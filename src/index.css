@@ -20,3 +20,7 @@
 body {
   @apply flex flex-col items-center;
 }
+
+input {
+  @apply p-4 outline-none border border-b-gray-300 my-1;
+}
