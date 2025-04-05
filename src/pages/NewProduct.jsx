@@ -72,7 +72,7 @@ function NewProduct() {
         <input
           type="text"
           name="category"
-          value={product.category}
+          value={product.category ?? ""}
           placeholder="Category"
           required
           onChange={handleChange}
@@ -88,7 +88,7 @@ function NewProduct() {
         <input
           type="text"
           name="options"
-          value={product.options}
+          value={product.options ?? ""}
           placeholder="Options (Separated by ',')"
           required
           onChange={handleChange}
