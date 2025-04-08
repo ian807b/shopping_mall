@@ -1,6 +1,6 @@
 function Banner() {
   return (
-    <div className="relative">
+    <div className="relative drop-shadow-xl">
       <img
         className="w-full h-48 sm:h-50 md:h-64 lg:h-72 object-cover"
         src="/banner.jpg"

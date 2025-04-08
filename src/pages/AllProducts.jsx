@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import Products from '../components/Products';
 
 function AllProducts() {
-  return <div>All Products</div>;
+  return <Products />;
 }
 
 export default AllProducts;
