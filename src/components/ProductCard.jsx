@@ -12,7 +12,6 @@ export default function ProductCard({
       className="rounded-lg shadow-md overflow-hidden cursor-pointer transition-all hover:scale-105"
       onClick={() => navigate(`/products/${id}`, { state: { product } })}
     >
-      >
       <div className="w-full h-120 overflow-hidden">
         <img className="w-full h-full object-cover" src={image} alt={title} />
       </div>
