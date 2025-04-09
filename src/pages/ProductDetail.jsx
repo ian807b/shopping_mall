@@ -26,10 +26,18 @@ function ProductDetail() {
     <>
       <p className="mx-12 mt-4 text-gray-700">{category}</p>
       <section className="flex flex-col md:flex-row p-4">
-        <img className="w-full px-4 basis-7/12" src={image} alt={title} />
-        <div className="w-full basis-5/12 flex flex-col p-4">
+        <div className="w-full md:basis-7/12 px-4">
+          <div className="w-full aspect-square overflow-hidden rounded-md bg-gray-100">
+            <img
+              className="w-full h-full object-contain"
+              src={image}
+              alt={title}
+            />
+          </div>
+        </div>
+        <div className="w-full md:basis-5/12 flex flex-col p-4">
           <h2 className="text-3xl font-bold py-2">{title}</h2>
-          <p className="text-2xl font-bold py-2  border-b border-gray-400">
+          <p className="text-2xl font-bold py-2 border-b border-gray-400">
             ${price}
           </p>
           <p className="py-4 text-lg">{description}</p>
@@ -57,5 +65,4 @@ function ProductDetail() {
     </>
   );
 }
-
 export default ProductDetail;
