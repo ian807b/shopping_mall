@@ -22,7 +22,10 @@ function ProductDetail() {
   };
 
   const handleClick = () => {
-    if (!uid) return;
+    if (!uid) {
+      alert("You must be logged in to add items to the cart.");
+      return;
+    }
 
     setIsAdding(true);
 
