@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router";
 import { BsPencilFill } from "react-icons/bs";
-import { login, logout, onUserStateChange } from "../api/firebase.js";
 import User from "./User.jsx";
 import Button from "./ui/Button.jsx";
 import { useAuthContext } from "../context/AuthContext.jsx";
+import Cart from "./ui/Cart.jsx";
 
 function Navbar() {
   const { user, login, logout } = useAuthContext();
@@ -16,7 +16,11 @@ function Navbar() {
       </Link>
       <nav className="flex items-center gap-4 font-semibold">
         <Link to="/products">Products</Link>
-        {user && <Link to="/cart">Cart</Link>}
+        {user && (
+          <Link to="/cart">
+            <Cart />
+          </Link>
+        )}
         {user && user.isAdmin && (
           <Link to="/products/new">
             <BsPencilFill />
