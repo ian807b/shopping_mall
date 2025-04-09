@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useAuthContext } from "../context/AuthContext.jsx";
 import { useQuery } from "@tanstack/react-query";
 import { getCart } from "../api/firebase.js";
